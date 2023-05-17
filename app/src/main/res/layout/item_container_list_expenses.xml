@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:background="@color/ColorActive"
+    android:layout_height="60dp"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+    <androidx.cardview.widget.CardView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:cardCornerRadius="10dp">
+        <ImageView
+            android:id="@+id/img_expenses"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:textSize="15dp"
+            android:textColor="@color/teal_700"
+            android:textStyle="bold"
+            android:id="@+id/title_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên khoản chi"/>
+        <TextView
+            android:id="@+id/expenses_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#BA750E"
+            android:textSize="12dp"
+            android:text="số tiền phải chi"/>
+        <TextView
+            android:textSize="8dp"
+            android:textColor="@color/bt_viewpager"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/date"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ImageButton
+            android:id="@+id/del_action_user"
+            android:layout_width="40dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+</LinearLayout>

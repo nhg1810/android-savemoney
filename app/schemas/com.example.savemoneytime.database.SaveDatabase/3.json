@@ -1,0 +1,128 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 3,
+    "identityHash": "c82a60bdeff8e81c6ac463e8cfc2b720",
+    "entities": [
+      {
+        "tableName": "category",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idCategory` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sourceImgCatelogy` INTEGER NOT NULL, `titleCatelogy` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "idCategory",
+            "columnName": "idCategory",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceImgCatelogy",
+            "columnName": "sourceImgCatelogy",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titleCatelogy",
+            "columnName": "titleCatelogy",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idCategory"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "actionuser",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idAction` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `titleAction` TEXT, `dateTimeAction` INTEGER, `paymentAction` TEXT, `idCategory` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "idAction",
+            "columnName": "idAction",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "titleAction",
+            "columnName": "titleAction",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "dateTimeAction",
+            "columnName": "dateTimeAction",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "paymentAction",
+            "columnName": "paymentAction",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "idCategory",
+            "columnName": "idCategory",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idAction"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "usersetting",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weekless` INTEGER NOT NULL, `normal` INTEGER NOT NULL, `caution` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "weekless",
+            "columnName": "weekless",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "normal",
+            "columnName": "normal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "caution",
+            "columnName": "caution",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'c82a60bdeff8e81c6ac463e8cfc2b720')"
+    ]
+  }
+}

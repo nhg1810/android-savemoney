@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    tools:context=".MainApplication.SecondFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_list_spending"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabBackground="@drawable/tab_seclected_tab_layout"
+        app:tabIconTint="@drawable/tab_seclected_tab_layout"
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@drawable/tab_seclected_tab_layout"
+        app:tabInlineLabel="false"
+
+        app:tabIconTintMode="src_atop"
+        app:tabTextColor="@color/black">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="123" />
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:id="@+id/view_pager_list_spending"
+        android:layout_height="match_parent"/>
+
+
+
+</LinearLayout>
